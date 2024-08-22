@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "47431bbb-e469-473f-87fb-9c0cf30eebdd",
+		"name": "postman-alfindhuhawanbagja-betest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24174245"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:300/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "300",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"first11\",\r\n    \"account_number\": \"789\",\r\n    \"email\": \"first3@gmail.com\",\r\n    \"identity_number\": \"34220233961122\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:300/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "300",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "4481abd3-2016-42b3-85bd-690f7e526344",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:300/api/users?page=1&size=10&search=",
+							"host": [
+								"localhost"
+							],
+							"port": "300",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Detail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "4481abd3-2016-42b3-85bd-690f7e526344",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "localhost:300/api/users/:typeSearch/:paramSearch",
+							"host": [
+								"localhost"
+							],
+							"port": "300",
+							"path": [
+								"api",
+								"users",
+								":typeSearch",
+								":paramSearch"
+							],
+							"variable": [
+								{
+									"key": "typeSearch",
+									"value": "account_number"
+								},
+								{
+									"key": "paramSearch",
+									"value": "789"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"first100\",\r\n    \"account_number\": \"789\",\r\n    \"email\": \"first1@gmail.com\",\r\n    \"identity_number\": \"34220233950076\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:300/api/users/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "300",
+							"path": [
+								"api",
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "66c745ca901b004770328bda"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:300/api/users/:userId",
+							"host": [
+								"localhost"
+							],
+							"port": "300",
+							"path": [
+								"api",
+								"users",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "66c74ca85ab8eb5bd51f21f3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzI0MzM2OTQyLCJleHAiOjE3MjQzNDQxNDJ9.vGYM3xobKLtdqqg-K2yabvaMrnjj9owhhude4OCm_Vc",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	]
+}
