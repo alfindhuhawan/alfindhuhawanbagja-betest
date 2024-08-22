@@ -1,4 +1,4 @@
-# ms-alfindhuhawanbagja-betest
+# alfindhuhawanbagja-betest
 
 This project is a Node.js application designed to run within the `ms-alfindhuhawanbagja-betest` directory. Follow the steps below to get your development environment set up. 
 
